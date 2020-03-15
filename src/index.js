@@ -11,7 +11,6 @@ const store = createStore(rootReducer,window.__REDUX_DEVTOOLS_EXTENSION__ && win
 
 ReactDOM.render(
 
-
 <Provider store={store}>
     <App />
   </Provider>,
