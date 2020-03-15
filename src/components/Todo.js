@@ -23,9 +23,9 @@ class Todo extends React.Component {
 
     handleAdd = (e) => {
         e.preventDefault();
-        if (this.state.currentTask) {
+        if (this.state.currentTask.trim()) {
             this.props.addTodo({
-                text: this.state.currentTask,
+                text: this.state.currentTask ,
                 id: Math.random(),
                 isComplete: false,
                 editText: false
@@ -35,7 +35,7 @@ class Todo extends React.Component {
             });
         }
 
-        else alert('add a Todo first')
+        else alert('add a Todo first');this.setState({ currentTask: "" });
     }
 
     handleRemove = (id) => {
@@ -50,7 +50,7 @@ class Todo extends React.Component {
 
     handleEdit = (id) => {
     
-        this.props.editTodo(id, { newText: this.state.edit });
+        this.props.editTodo(id, { newText: this.state.edit.trim() });
         this.setState({ edit: '' })
 
 
