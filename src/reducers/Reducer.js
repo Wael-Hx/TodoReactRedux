@@ -1,7 +1,5 @@
 import { ADD_TODO, REMOVE_TODO, COMPLETE_TODO, EDIT_TODO } from "../actions/actionsTypes"
 
-// let tdId = 0 ;
-
 let initialState = []
 
 const TodoReducer = (state = initialState, action) => {
